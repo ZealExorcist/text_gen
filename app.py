@@ -1,9 +1,6 @@
 from groq import Groq
 import streamlit as st
 
-API_KEY = "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"
-
-
 st.set_page_config(
     page_title="Text Generation Chatbot",
     page_icon="🤖",
@@ -13,8 +10,7 @@ st.set_page_config(
 
 st.subheader("Text Generation Chatbot", divider=True)
 
-#client = Groq(api_key=st.secrets["API_KEY"])
-client = Groq(api_key=API_KEY)
+client = Groq(api_key=st.secrets["API_KEY"])
 
 if "selected_model" not in st.session_state:
     st.session_state.selected_model = None
